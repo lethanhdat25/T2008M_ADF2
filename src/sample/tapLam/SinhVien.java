@@ -1,14 +1,24 @@
 package sample.tapLam;
 
 public class SinhVien {
+    Integer id;
     String name;
     Integer age;
     Integer mark;
 
-    public SinhVien(String name, Integer age, Integer mark) {
+    public SinhVien(Integer id, String name, Integer age, Integer mark) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.mark = mark;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
