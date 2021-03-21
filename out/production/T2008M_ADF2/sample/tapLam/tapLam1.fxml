@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="sample.tapLam.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="143.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sach hoc sinh" wrappingWidth="309.22900390625">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+      <TableView fx:id="txtView" layoutX="17.0" layoutY="189.0" prefHeight="279.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="250.0" text="Ten" />
+          <TableColumn fx:id="columnAge" prefWidth="178.0" text="Tuoi" />
+            <TableColumn fx:id="columnMark" prefWidth="135.0" text="Diem" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtName" layoutX="34.0" layoutY="67.0" promptText="Ten SV"/>
+      <TextField fx:id="txtAge" layoutX="211.0" layoutY="67.0" promptText="Tuoi SV"/>
+      <TextField fx:id="txtMark"  layoutX="388.0" layoutY="67.0" promptText="Diem SV"/>
+      <Button fx:id="button" onAction="#sapXep" layoutX="59.0" layoutY="116.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Cao den thap" />
+       <Button fx:id="chinhSua" onAction="#chinhSua" layoutX="250.0" layoutY="116.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="78.0" text="Button" />
+      <Button onAction="#inra" layoutX="388.0" layoutY="116.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="87.0" text="In ra" />
+   </children>
+</Pane>

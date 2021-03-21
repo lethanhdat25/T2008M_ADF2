@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="sample.Dongho.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text  layoutX="160.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dong ho dem nguoc" wrappingWidth="280.22900390625">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Button onAction="#start" layoutX="199.0" layoutY="200.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="181.0" text="Start" textFill="RED">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Text fx:id="Min" layoutX="135.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="97.03125">
+         <font>
+            <Font size="80.0" />
+         </font>
+      </Text>
+      <Text fx:id="Sec" layoutX="342.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+         <font>
+            <Font size="80.0" />
+         </font>
+      </Text>
+      <Text layoutX="279.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+         <font>
+            <Font size="80.0" />
+         </font>
+      </Text>
+      <Button onAction="#stop" layoutX="408.0" layoutY="208.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="117.0" text="Stop" textFill="RED">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Button>
+      <Button onAction="#reset" layoutX="67.0" layoutY="208.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="117.0" text="Reset" textFill="RED">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
