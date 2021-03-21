@@ -9,49 +9,59 @@ public class Controller {
     public Integer min=2;
     public Integer sec=10;
     boolean start=true;
-    boolean stop;
+    boolean stop=false;
+    boolean reset=false;
     public void start(){
-        if (start){
+        if (start) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    while (min>=0&&sec>=0){
-                        if (!stop) {
+                    while (min >= 0 && sec >= 0) {
+                        if (reset) {
+                            min=0;
+                            sec=0;
+                            Min.setText("0" + min.toString());
+                            Sec.setText("0" + sec.toString());
+                        } else {
                             Min.setText(min >= 10 ? min.toString() : "0" + min.toString());
                             Sec.setText(sec >= 10 ? sec.toString() : "0" + sec.toString());
-                            sec--;
-                            if (sec < 0) {
-                                sec = 59;
-                                min--;
+                            if (stop) {
+                                Min.setText(min >= 10 ? min.toString() : "0" + min.toString());
+                                Sec.setText(sec >= 10 ? sec.toString() : "0" + sec.toString());
+                            } else {
+                                sec--;
+                                if (sec < 0) {
+                                    sec = 59;
+                                    min--;
+                                }
                             }
 
                             try {
-                                Thread.sleep(100);
+                                Thread.sleep(1000);
                             } catch (Exception e) {
                             }
-                        }else{
-                            return;
                         }
                     }
-                    System.out.println(start);
                 }
             }).start();
+            System.out.println(start);
             start=false;
-        }else {
-            System.out.println("da chay");
         }
     }
+
     public void stop(){
         new Thread(new Runnable() {
             @Override
             public void run() {
-                start=true;
-                stop=true;
+                if (stop){
+                    stop=false;
+                }else stop=true;
             }
         }).start();
     }
 
     public void reset(){
-
+        reset=true;
+        start=true;
     }
 }
