@@ -2,10 +2,8 @@
 
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-
-<Pane fx:controller="sample.tapLam.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="sample.tapLam.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Label contentDisplay="CENTER" layoutX="200.0" layoutY="26.0" prefHeight="17.0" prefWidth="268.0" text="Danh sach Sinh vien">
             <font>
@@ -24,6 +22,7 @@
             </columns>
         </TableView>
         <Text fx:id="txtValidate" disable="true" fill="#ee0a0a" layoutX="54.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-color: red;" wrappingWidth="387.22900390625" />
+        <Button onAction="#trolai" layoutX="17.0" layoutY="476.0" mnemonicParsing="false" text="Tro  lai" />
         <Button onAction="#update" fx:id="btnSort" layoutX="53.0" layoutY="141.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="131.0" text="Cap nhat" />
     </children>
 </Pane>

@@ -3,10 +3,14 @@ package sample.tapLam;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import sample.Main;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,7 +31,7 @@ public class Controller implements Initializable {
 
     public static Integer identity = 0;
     public static SinhVien editSinhVien;
-    ObservableList<SinhVien> ds = FXCollections.observableArrayList();
+    public static ObservableList<SinhVien> ds = FXCollections.observableArrayList();
     static boolean sortType = false;
 
     @Override
@@ -109,5 +113,11 @@ public class Controller implements Initializable {
         txtAge.setText(s.getAge().toString());
         txtMark.setText(s.getMark().toString());
         editSinhVien = s;
+    }
+    public  void trolai() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("menuHome.fxml"));
+        Main.mainStage.setTitle("Hello World");
+        Main.mainStage.setScene(new Scene(root, 700, 700));
+        Main.mainStage.show();
     }
 }

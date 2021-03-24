@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="sample.tapLam.Controller_ThemHS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="themTenHS" layoutX="214.0" layoutY="88.0" prefHeight="35.0" prefWidth="174.0" promptText="Ten Hs" />
+      <TextField fx:id="themTuoiHS" layoutX="213.0" layoutY="143.0" prefHeight="35.0" prefWidth="174.0" promptText="Tuoi HS" />
+      <Button onAction="#ThemHS" layoutX="252.0" layoutY="266.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Button" />
+      <TextField fx:id="themDiemHS" layoutX="214.0" layoutY="193.0" prefHeight="35.0" prefWidth="174.0" promptText="Diem HS" />
+      <Button onAction="#trolai" layoutX="47.0" layoutY="270.0" mnemonicParsing="false" text="Tro lai" />
+   </children>
+</Pane>

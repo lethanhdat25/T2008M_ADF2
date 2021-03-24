@@ -8,7 +8,7 @@ public class DemoThread extends Thread {
                 if (i==10){
                     j=0;
                 }
-                System.out.println((i>=10?i:"0"+i)+" : "+(j>=10?j:"0"+j));
+                System.out.println(Thread.currentThread().getName()+"  "+(i>=10?i:"0"+i)+" : "+(j>=10?j:"0"+j));
                 try {
                     Thread.sleep(10);
                 }catch (Exception e){
