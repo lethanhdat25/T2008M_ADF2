@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+
+
+<Pane fx:controller="lamLai.danhsachHS.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="26.0" layoutY="41.0" prefHeight="27.0" prefWidth="128.0" />
+      <TextField fx:id="txtAge"  layoutX="172.0" layoutY="41.0" prefHeight="27.0" prefWidth="128.0" />
+      <TextField fx:id="txtMark" layoutX="318.0" layoutY="41.0" prefHeight="27.0" prefWidth="128.0" />
+      <Button onAction="#submit" layoutX="462.0" layoutY="41.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="63.0" text="Submit" />
+      <Button onAction="#update" layoutX="531.0" layoutY="41.0" mnemonicParsing="false" text="Change" />
+      <TableView fx:id="tbView" layoutX="20.0" layoutY="93.0" prefHeight="238.0" prefWidth="561.0">
+        <columns>
+            <TableColumn fx:id="TenSV" prefWidth="185.0" text="Ten" />
+            <TableColumn fx:id="TuoiSV" prefWidth="201.0" text="Tuoi" />
+            <TableColumn fx:id="DiemSV" prefWidth="174.0" text="Diem" />
+        </columns>
+      </TableView>
+      <Button onAction="#trolai" layoutX="35.0" layoutY="347.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="103.0" text="Tro lai" />
+   </children>
+</Pane>

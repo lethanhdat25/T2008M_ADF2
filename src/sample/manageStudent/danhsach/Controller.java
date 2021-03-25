@@ -2,10 +2,14 @@ package sample.manageStudent.danhsach;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.manageStudent.Main;
 import sample.manageStudent.model.Sinhvien_st;
 
 import java.io.DataInputStream;
@@ -48,5 +52,14 @@ public class Controller implements Initializable {
         }
     }
 
+    public void trolai(){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("../home/menuHome.fxml"));
+            Main.mainStage.setTitle("Hello World");
+            Main.mainStage.setScene(new Scene(root, 700, 700));
+            Main.mainStage.show();
+        }catch (Exception e){
 
+        }
+    }
 }

@@ -13,6 +13,6 @@
             <TableColumn fx:id="txtMark" prefWidth="179.0" text="Deim" />
         </columns>
       </TableView>
-      <Button layoutX="41.0" layoutY="24.0" mnemonicParsing="false" text="Trang  chu" />
+      <Button onAction="#trolai" layoutX="41.0" layoutY="24.0" mnemonicParsing="false" text="Trang  chu" />
    </children>
 </Pane>

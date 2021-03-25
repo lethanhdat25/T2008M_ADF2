@@ -10,6 +10,6 @@
       <TextField fx:id="txtTuoi" layoutX="213.0" layoutY="143.0" prefHeight="35.0" prefWidth="174.0" promptText="Tuoi HS" />
       <Button onAction="#Them" layoutX="252.0" layoutY="266.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Button" />
       <TextField fx:id="txtDiem" layoutX="214.0" layoutY="193.0" prefHeight="35.0" prefWidth="174.0" promptText="Diem HS" />
-      <Button  layoutX="47.0" layoutY="270.0" mnemonicParsing="false" text="Tro lai" />
+      <Button layoutX="47.0" layoutY="270.0" mnemonicParsing="false" text="Tro lai" />
    </children>
 </Pane>

@@ -17,34 +17,36 @@ public class Controller {
     public TextField txtTuoi;
     public TextField txtDiem;
     ArrayList<String> arr=new ArrayList<>();
-    public void Them(){
+    public void Them() throws Exception{
         String n=txtTen.getText();
         Integer t=Integer.parseInt(txtTuoi.getText());
         Integer m=Integer.parseInt(txtDiem.getText());
         if (!n.isEmpty()){
             try{
-                FileOutputStream fos=new FileOutputStream("student.bin");
-                DataOutputStream dos=new DataOutputStream(fos);
                 FileInputStream fis= new FileInputStream("student.bin");
                 DataInputStream dis=new DataInputStream(fis);
-                String txt=dis.readLine();;
+                String txt=dis.readLine();
                 while(txt!=null){
-                    arr.add(txt+"\n");
+                    arr.add(txt);
                     txt= dis.readLine();
                 }
-                arr.add(n+"\n");
-                arr.add(t.toString()+"\n");
-                arr.add(m.toString()+"\n");
-                for (int i = 0; i < arr.size(); i++) {
-                    dos.writeBytes(arr.get(i));
+                arr.add(n);
+                arr.add(t.toString());
+                arr.add(m.toString());
+                FileOutputStream fos=new FileOutputStream("student.bin");
+                DataOutputStream dos=new DataOutputStream(fos);
+                for ( String x:
+                        arr) {
+                    dos.writeBytes(x+"\n");
                 }
-                Parent root = FXMLLoader.load(getClass().getResource("../danhsach/danhsach.fxml"));
-                Main.mainStage.setTitle("Hello World");
-                Main.mainStage.setScene(new Scene(root, 700, 700));
-                Main.mainStage.show();
+
 
             }catch (Exception e){}
 
+            Parent root = FXMLLoader.load(getClass().getResource("../danhsach/danhsach.fxml"));
+            Main.mainStage.setTitle("Hello World");
+            Main.mainStage.setScene(new Scene(root, 700, 700));
+            Main.mainStage.show();
         }
     }
 }
