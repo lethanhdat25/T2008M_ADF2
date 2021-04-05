@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="sample.practical.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="215.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address Book" wrappingWidth="170.22900390625">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="name" layoutX="54.0" layoutY="61.0" promptText="Name" />
+      <TextField fx:id="phone" layoutX="254.0" layoutY="61.0" promptText="Phone Number" />
+      <Button onAction="#Them" layoutX="457.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="Add" />
+      <TableView fx:id="tbView" layoutX="53.0" layoutY="103.0" prefHeight="271.0" prefWidth="363.0">
+        <columns>
+          <TableColumn fx:id="tbName" prefWidth="179.0" text="Contact Name" />
+          <TableColumn fx:id="tbPhone" prefWidth="183.0" text="Phone Number" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="434.0" layoutY="166.0" prefHeight="27.0" prefWidth="127.0" />
+      <Button onAction="#Search" layoutX="477.0" layoutY="200.0" mnemonicParsing="false" text="Find" />
+      <Button onAction="#Exit" layoutX="454.0" layoutY="347.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="88.0" text="Exit" />
+   </children>
+</Pane>
